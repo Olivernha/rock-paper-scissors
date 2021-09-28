@@ -25,7 +25,7 @@ There are multiple places you can share your solution:
 
 ## Giving feedback
 
-Feedback is always welcome, so if you have any on this challenge please email **Matt** at matt[at]frontendmentor[dot]io.
+Feedback is always welcome, so if you have any on this challenge please email me.
 
 This challenge is completely free. Please share it with anyone who will find it useful to practice on.
 
