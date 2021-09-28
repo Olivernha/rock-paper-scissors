@@ -112,3 +112,49 @@
     margin-left: 20px;
   }
 
+.contest{
+  width:100%;
+  display: flex;
+  margin-top: 50px;
+}
+
+.contest .button{
+ margin-left: 0;
+}
+.contest > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contest h1 {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.contest .handImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.referee h1 {
+  font-size: 45px;
+  color: white;
+}
+
+.contest .newGame {
+  color: hsl(229, 25%, 31%);
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.contest .newGame:hover {
+  background: rgb(218, 218, 218);
+  transform: translate3d(0px, -2px, 0px);
+}
