@@ -1,6 +1,6 @@
 # Frontend Mentor - Rock, Paper, Scissors
 
-![Header/intro section for the Huddle landing page with single column layout](./design/desktop-preview.jpg)
+
 
 ## Welcome! 👋
 
