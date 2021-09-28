@@ -40,7 +40,7 @@
       </div>
       <div class="referee">
         <div class="decision">
-          <h1>{{ decision }}</h1>
+          <h1>{{ decision ?? "It's a tie!"}}</h1>
         </div>
         <div class="newGame" @click.prevent="restartGame">PLAY AGAIN</div>
       </div>
@@ -78,6 +78,12 @@ export default {
       cBgColor: null,
       cBoxShadow: null,
     });
+    function setDecision(d) {
+      decision.value = d;
+    }
+    function setScore(newScore) {
+      SCORE.value = newScore;
+    }
     function colorGenerate(hand) {
       if (hand == "scissors") {
         img = require(`./assets/icon-${hand}.svg`);
@@ -105,17 +111,15 @@ export default {
       referee(hand, cpHands);
     }
     function pickUserHand(hand) {
-      pickComputerHand(hand);
       playing.value = true;
-
       const { bgColor, boxShadow, img } = colorGenerate(hand);
       userPick.image = img;
       userPick.bgColor = bgColor;
       userPick.boxShadow = boxShadow;
+      pickComputerHand(hand);
     }
 
     function referee(userHand, cpHand) {
-      console.log(userHand, cpHand);
       if (userHand == "paper" && cpHand == "scissors") {
         setDecision("YOU LOSE!");
       }
@@ -147,12 +151,7 @@ export default {
         setScore(SCORE.value + 1);
       }
     }
-    function setDecision(d) {
-      decision.value = d;
-    }
-    function setScore(newScore) {
-      SCORE.value = newScore;
-    }
+
     function restartGame() {
       playing.value = false;
     }
